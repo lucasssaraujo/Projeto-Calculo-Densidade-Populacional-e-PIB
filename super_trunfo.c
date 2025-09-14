@@ -11,7 +11,7 @@ int main() {
     printf("Este jogo será baseado em cidades, você irá preencher as informações das cidade conforme é solicitado \n\n");
     
 
-    printf("Carta 1\n");
+    //printf("Carta 1\n");
     printf("Estado: ");
     fgets(sigla, sizeof(sigla), stdin);
     sigla[strcspn(sigla, "\n")] = 0;
@@ -44,10 +44,21 @@ int main() {
     getchar();
 
 
+    printf("\n\n\nPrimeira Carta\n"
+        "Estado: %s\n"
+        "Código: %s\n"
+        "Cidade: %s\n"
+        "População: %d\n"
+        "Área: %.2fkm²\n"
+        "PIB: %.2f\n"
+        "Número de Pontos Turísticos: %d",
+        sigla, codigo, cidade, populacao, area, pib, pontosTuristicos);
 
 
-    printf("\n\nCarta 2\n");
-    printf("Estado: ");
+
+
+    //printf("\n\nCarta 2\n");
+    printf("\n\n\n\nEstado: ");
     fgets(sigla, sizeof(sigla), stdin);
     sigla[strcspn(sigla, "\n")] = 0;
 
@@ -74,6 +85,16 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos);
     getchar();
+
+    printf("\n\n\n\nSegunda Carta\n"
+        "Estado: %s\n"
+        "Código: %s\n"
+        "Cidade: %s\n"
+        "População: %d\n"
+        "Área: %.2fkm²\n"
+        "PIB: %.2f\n"
+        "Número de Pontos Turísticos: %d\n\n",
+        sigla, codigo, cidade, populacao, area, pib, pontosTuristicos);
 
     return 0;    
 }
